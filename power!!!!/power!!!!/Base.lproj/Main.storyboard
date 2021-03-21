@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="power____" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5O-EF-lxm" customClass="EMTNeumorphicButton" customModule="EMTNeumorphicView">
+                                <rect key="frame" x="107" y="344" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="2Yi-bI-TKP"/>
+                                    <constraint firstAttribute="height" constant="200" id="g8L-5C-4SH"/>
+                                </constraints>
+                                <state key="normal">
+                                    <imageReference key="image" image="power" catalog="system" symbolScale="large"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Y8-QZ-deh" customClass="EMTNeumorphicView" customModule="EMTNeumorphicView">
+                                <rect key="frame" x="40" y="732" width="140" height="40"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cGr-cB-fL2">
+                                        <rect key="frame" x="71" y="4.5" width="51" height="31"/>
+                                        <color key="onTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="toggleDidTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="nRJ-XB-P2I"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lock:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ZB-hf-8Ff">
+                                        <rect key="frame" x="20" y="9.5" width="41" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="cGr-cB-fL2" secondAttribute="trailing" constant="20" id="3bV-2Y-j3l"/>
+                                    <constraint firstItem="3ZB-hf-8Ff" firstAttribute="centerY" secondItem="cGr-cB-fL2" secondAttribute="centerY" id="KEt-Th-rna"/>
+                                    <constraint firstItem="cGr-cB-fL2" firstAttribute="centerY" secondItem="5Y8-QZ-deh" secondAttribute="centerY" id="RJv-4H-MND"/>
+                                    <constraint firstItem="3ZB-hf-8Ff" firstAttribute="leading" secondItem="5Y8-QZ-deh" secondAttribute="leading" constant="20" id="U58-JY-BUs"/>
+                                    <constraint firstAttribute="height" constant="40" id="Xp5-ah-xzK"/>
+                                    <constraint firstItem="cGr-cB-fL2" firstAttribute="leading" secondItem="3ZB-hf-8Ff" secondAttribute="trailing" constant="10" id="oWk-v6-vTP"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCn-Qb-TfA" customClass="EMTNeumorphicView" customModule="EMTNeumorphicView">
+                                <rect key="frame" x="40" y="802" width="304" height="40"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="mxY-Om-Vpe">
+                                        <rect key="frame" x="18" y="5" width="268" height="31"/>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5Fz-bJ-Bgb"/>
+                                    <constraint firstItem="mxY-Om-Vpe" firstAttribute="centerX" secondItem="hCn-Qb-TfA" secondAttribute="centerX" id="Kx5-Oq-h3I"/>
+                                    <constraint firstItem="mxY-Om-Vpe" firstAttribute="centerY" secondItem="hCn-Qb-TfA" secondAttribute="centerY" id="O1f-ru-0AG"/>
+                                    <constraint firstItem="mxY-Om-Vpe" firstAttribute="leading" secondItem="hCn-Qb-TfA" secondAttribute="leading" constant="20" id="bkg-Ip-Nvq"/>
+                                    <constraint firstAttribute="trailing" secondItem="mxY-Om-Vpe" secondAttribute="trailing" constant="20" id="pb3-Vi-gTh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hCn-Qb-TfA" secondAttribute="trailing" constant="70" id="3aV-93-hRv"/>
+                            <constraint firstItem="hCn-Qb-TfA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Bns-l0-qkz"/>
+                            <constraint firstItem="5Y8-QZ-deh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="GdW-Ki-CsY"/>
+                            <constraint firstItem="A5O-EF-lxm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nir-Ic-Cym"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hCn-Qb-TfA" secondAttribute="bottom" constant="20" id="eaM-vZ-zSG"/>
+                            <constraint firstItem="hCn-Qb-TfA" firstAttribute="top" secondItem="5Y8-QZ-deh" secondAttribute="bottom" constant="30" id="hI1-JL-oq0"/>
+                            <constraint firstItem="A5O-EF-lxm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="idI-gM-42t"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="hapticSlider" destination="mxY-Om-Vpe" id="g61-zt-k73"/>
+                        <outlet property="lockView" destination="5Y8-QZ-deh" id="pTR-hB-dIe"/>
+                        <outlet property="powerButton" destination="A5O-EF-lxm" id="vxo-fs-xNv"/>
+                        <outlet property="sliderView" destination="hCn-Qb-TfA" id="Zbo-yK-kc6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95.652173913043484" y="64.955357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="power" catalog="system" width="128" height="124"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
